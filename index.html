@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Power of 2 Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 50px;
+      text-align: center;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+    p {
+      font-size: 20px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1>Power of 2 Calculator</h1>
+  <input type="number" id="numberInput" placeholder="Enter a number" oninput="calculatePower()">
+  <p>Result: <span id="resultBox"></span></p>
+
+  <script>
+    function calculatePower() {
+      const number = document.getElementById("numberInput").value;
+      const result = Math.pow(number, 2);
+      document.getElementById("resultBox").innerText = result;
+    }
+  </script>
+</body>
+</html>
